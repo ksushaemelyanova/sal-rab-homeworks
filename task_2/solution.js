@@ -4,6 +4,17 @@ function calcShipping(sum, min, shipping) {
     let shippingPrice = shipping; // стоимость доставки
 
     // Задание №2.1. Рассчитать доставку
+    
+    let shippingSum;
+
+    if (productsSum == 0 || productsSum >= freeShippingMinSum) {
+        return 0;
+    }
+
+    if (productsSum > 0 && productsSum < freeShippingMinSum) {
+        return shipping;
+    }
+    return 0;
 
     // создайте переменную shippingSum
 
@@ -17,8 +28,6 @@ function calcShipping(sum, min, shipping) {
     // то shippingSum присвоить значение shippingPrice
 
     // Конец решения задания №2.1.
-
-    return shippingSum;
 }
 
 function calcDiscount(sum, min, discount) {
